@@ -5,7 +5,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def render():
-
+    app.logger.info("Requestd root path '/'. log 1")
+    app.logger.info("Requestd root path '/'. log 2")
     return render_template(
         'index.html',
         hostname=socket.gethostname(),
